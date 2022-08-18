@@ -1,0 +1,8 @@
+{
+  "name": "@homeoffice-web/subapp1",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

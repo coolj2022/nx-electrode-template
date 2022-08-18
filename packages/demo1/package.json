@@ -1,0 +1,10 @@
+{
+  "name": "@homeoffice-web/demo1",
+  "main": "src/index.ts",
+  "version": "0.0.0",
+  "scripts": {},
+  "dependencies": {
+    "@homeoffice-web/subapp1": "*"
+  },
+  "devDependencies": {}
+}

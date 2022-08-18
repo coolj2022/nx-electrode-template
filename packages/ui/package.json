@@ -1,0 +1,9 @@
+{
+  "name": "@homeoffice-web/ui",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

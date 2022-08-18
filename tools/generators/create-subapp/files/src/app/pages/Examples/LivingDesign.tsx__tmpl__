@@ -1,0 +1,29 @@
+import React from 'react';
+import { Body, Heading } from '@walmart-web/livingdesign-components';
+
+export const LivingDesign = () => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        background: '#efefef',
+        padding: '25px',
+        margin: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Heading>Living Design</Heading>
+      <Body>
+        The subapp has living designs UI library integrated for design consistency across subapps
+        and core. Check the Living Design Documentation test
+        <a href='https://wmlink/ld3' target='_blank' rel='noreferrer'>
+          here
+        </a>
+      </Body>
+    </div>
+  );
+};
+
+/* istanbul ignore next */
+export default LivingDesign;

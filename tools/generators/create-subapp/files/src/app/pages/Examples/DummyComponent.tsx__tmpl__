@@ -1,0 +1,21 @@
+import React from 'react';
+import { Body } from '@walmart-web/livingdesign-components';
+export const DummyComponent = ({ dynamic }) => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        background: '#efefef',
+        padding: '25px',
+        margin: '50px',
+      }}
+    >
+      <Body>
+        Dummy Component to demonstrate nested routing {dynamic}. Use browser back button to go back
+      </Body>
+    </div>
+  );
+};
+
+/* istanbul ignore next */
+export default DummyComponent;

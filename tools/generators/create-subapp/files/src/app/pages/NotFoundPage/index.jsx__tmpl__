@@ -1,0 +1,20 @@
+import React from 'react';
+import { Heading } from '@walmart-web/livingdesign-components';
+const PageNotFound = () => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        background: '#efefef',
+        padding: '25px',
+        margin: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Heading style={{ color: 'red' }}>PAGE NOT FOUND</Heading>
+    </div>
+  );
+};
+
+export default PageNotFound;

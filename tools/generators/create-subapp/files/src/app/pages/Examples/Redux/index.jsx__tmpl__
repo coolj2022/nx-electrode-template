@@ -1,0 +1,78 @@
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { Body, Button, Card, Divider, Heading } from '@walmart-web/livingdesign-components';
+import '@livingdesign/bogle/dist/Bogle.css';
+import '@walmart-web/livingdesign-components/index.esm.css';
+import { getInfo } from './selectors';
+import { updateSomething } from './actions';
+import { getUserInfo } from '@nextech/homeoffice-web-utils';
+
+export const ReduxDemo = () => {
+  const dispatch = useDispatch();
+
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        background: '#efefef',
+        padding: '25px',
+        margin: '50px',
+      }}
+    >
+      <Divider />
+      <Body as='div' size='small' weight={400}>
+        <Heading>Redux State Sharing</Heading>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            padding: 20,
+          }}
+        >
+          <Heading as='h2' size='medium'>
+            Core App State
+          </Heading>
+          <Card style={{ padding: 20 }}>
+            <Heading as='h4' size='small'>
+              Name: {useSelector(getUserInfo)?.name}
+            </Heading>
+            <Heading as='h4' size='small'>
+              Login Id: {useSelector(getUserInfo)?.loginId}
+            </Heading>
+            <Body style={{ wordBreak: 'break-all' }}>Auth Token: {useSelector(getUserInfo)?.access_token}</Body>
+          </Card>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            padding: 20,
+          }}
+        >
+          <Heading as='h2' size='medium'>
+            Sub App State
+          </Heading>
+          <Card style={{ padding: 20 }}>
+            <Heading as='h4' size='small'>
+              Data: {useSelector(getInfo)?.msg}
+            </Heading>
+            <div>
+              <Button
+                variant='secondary'
+                type='button'
+                size='small'
+                onClick={() => dispatch(updateSomething({ msg: 'Subapp State' + Math.random() }))}
+              >
+                Update Sub App State
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </Body>
+    </div>
+  );
+};
+export default ReduxDemo;

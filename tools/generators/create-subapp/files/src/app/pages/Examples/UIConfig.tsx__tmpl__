@@ -1,0 +1,39 @@
+import React from 'react';
+import { Body, Heading } from '@walmart-web/livingdesign-components';
+import { ui as uiConfig } from '@walmart/electrode-ui-config';
+
+export const UIConfig = () => {
+  const analyticsScript = uiConfig?.googleAnalytics?.scriptUrl;
+  const analyticsId = uiConfig?.googleAnalytics?.measurementId;
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        background: '#efefef',
+        padding: '25px',
+        margin: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Heading>UI Config</Heading>
+      <Body>
+        The subapp can access UI config setup per environment via electrode-ui-config lib. The ui
+        config property set are as below and for more documentation on UI config check{' '}
+        <a
+          href='https://gecgithub01.walmart.com/electrode/gtp-js/tree/main/packages/electrode-ui-config'
+          target='_blank'
+          rel='noreferrer'
+        >
+          here
+        </a>
+        <pre style={{ display: 'flex', textAlign: 'left', justifyContent: 'center' }}>
+          {JSON.stringify(uiConfig, undefined, 2)}
+        </pre>
+      </Body>
+    </div>
+  );
+};
+
+/* istanbul ignore next */
+export default UIConfig;

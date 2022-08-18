@@ -1,0 +1,52 @@
+import { PageRenderer } from "@xarc/react";
+import { ElectrodeFastifyInstance } from "@walmart/wml-server-fastify";
+import electrodeCookies from "@walmart/electrode-cookies";
+import { authSchemeName } from "@gtpjs/sso-pingfed";
+
+/**
+ * A fastify route prehandler to set the cookie SSO_CRED with SSO auth credentials
+ *
+ * @param request
+ * @param reply
+ * @param done
+ */
+export const setSsoCredCookie = (request, reply, done) => {
+  if (request.auth && request.auth.credentials) {
+    const cred = request.auth.credentials;
+    electrodeCookies.set(
+      "SSO_CRED",
+      cred,
+      {
+        request,
+        secure: true,
+      }
+    );
+  } else if (electrodeCookies.get("SSO_CRED")) {
+    electrodeCookies.expire("SSO_CRED");
+  }
+  done();
+};
+
+/**
+ * return auth prehandler for sso pingfed
+ *
+ * @param server
+ * @param additionalHandlers
+ * @returns
+ */
+export const getAuthPreHandler = (
+  server: ElectrodeFastifyInstance,
+  additionalHandlers = [setSsoCredCookie],
+  _url: string = ""
+): any => {
+  return (server as any).auth([server[authSchemeName]].concat(additionalHandlers), {
+    run: "all",
+  });
+};
+
+/**
+ * Register additional server routes here
+ *
+ * @param server
+ */
+export const additionalRoutes = (server: ElectrodeFastifyInstance): void => {};

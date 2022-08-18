@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  background: #0071DC;
+  width: 100%;
+  height: 51px;
+  padding: 8px 24px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.header h1, .header button {
+  color: #fff;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-spark {
+  color: #FFC220;
+}
+
+.nav-toggle:active, .nav-toggle:hover, .nav-toggle:focus {
+  background: transparent;
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+}

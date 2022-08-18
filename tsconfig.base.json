@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@homeoffice-web/demo1": ["packages/demo1/src/index.ts"],
+      "@homeoffice-web/design2": ["packages/design2/src/index.ts"],
+      "@homeoffice-web/subapp1": ["packages/subapp1/src/index.ts"],
+      "@homeoffice-web/ui": ["packages/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
