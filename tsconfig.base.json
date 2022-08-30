@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@homeoffice-web/demo1": ["packages/demo1/src/index.ts"],
-      "@homeoffice-web/design2": ["packages/design2/src/index.ts"],
       "@homeoffice-web/subapp1": ["packages/subapp1/src/index.ts"],
       "@homeoffice-web/ui": ["packages/ui/src/index.ts"]
     }

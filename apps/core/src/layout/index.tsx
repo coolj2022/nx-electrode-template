@@ -9,7 +9,7 @@ import Home from './containers/HomePage';
 //  import { reduxReducers as libReducers, setUserInfo } from '@nextech/homeoffice-web-utils'
 import { subApp as demo1SubApp, reducers as demo1Reducers } from '@homeoffice-web/demo1';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Header, SideNav } from '@homeoffice-web/design2';
+import { Header, SideNav } from '@homeoffice-web/ui';
 import menuData from '../common/menu';
 
 const Demo1 = createDynamicComponent(demo1SubApp, { ssr: false });
