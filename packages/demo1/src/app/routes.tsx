@@ -1,5 +1,4 @@
 import React from 'react';
-import { createDynamicComponent } from '@xarc/react';
 import { Switch, Route } from 'react-router-dom';
 import DummyComponent from './pages/Examples/DummyComponent';
 import LivingDesign from './pages/Examples/LivingDesign';
