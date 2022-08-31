@@ -1,97 +1,97 @@
 [
-	{
-		"name": "Me@Home",
-		"icon": "Associate",
-		"children": [
-			{
-				"name": "Home",
-				"icon": "home",
-				"children": [
-					{
-						"name": "Home",
-						"url": "/home"
-					}
-				]
-			},
-			{
-				"name": "My Profile",
-				"icon": "contact_mail_outlined",
-				"children": [
-					{
-						"name": "Me",
-						"url": "/profile/me"
-					},
-					{
-						"name": "Career",
-						"url": "/profile/career"
-					}
-				]
-			},
-			{
-				"name": "Approvals Inbox",
-				"icon": "mail_outline",
-				"children": [
-					{
-						"name": "All",
-						"url": "/inbox/all"
-					},
-					{
-						"name": "People",
-						"url": "/inbox/people"
-					},
-					{
-						"name": "Technology",
-						"url": "/inbox/technology"
-					}
-				]
-			},
-			{
-				"name": "Settings",
-				"icon": "settings",
-				"children": [
-					{
-						"name": "Settings",
-						"url": "/settings"
-					}
-				]
-			},
-			{
-				"name": "Sample Apps",
-				"icon": "bolt",
-				"children": [
-					{
-						"name": "Demo1",
-						"url": "/demo1"
-					},
-					{
-						"name": "Demo2",
-						"url": "/demo2"
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Money",
-		"icon": "paid_outlined",
-		"children": [
-			{
-				"name": "Money",
-				"icon": "paid_outlined",
-				"children": [
-					{
-						"name": "Direct Deposit",
-						"url": "/money/direct"
-					},
-					{
-						"type": "seperator"
-					},
-					{
-						"name": "My paystub (Coming Soon)",
-						"url": "/money/paystub"
-					}
-				]
-			}
-		]
-	}
+  {
+    "name": "Me@Home",
+    "icon": "home",
+    "children": [
+      {
+        "name": "Home",
+        "icon": "home",
+        "children": [
+          {
+            "name": "Home",
+            "url": "/home"
+          }
+        ]
+      },
+      {
+        "name": "My Profile",
+        "icon": "contact_mail_outlined",
+        "children": [
+          {
+            "name": "Me",
+            "url": "/profile/me"
+          },
+          {
+            "name": "Career",
+            "url": "/profile/career"
+          }
+        ]
+      },
+      {
+        "name": "Approvals Inbox",
+        "icon": "mail_outline",
+        "children": [
+          {
+            "name": "All",
+            "url": "/inbox/all"
+          },
+          {
+            "name": "People",
+            "url": "/inbox/people"
+          },
+          {
+            "name": "Technology",
+            "url": "/inbox/technology"
+          }
+        ]
+      },
+      {
+        "name": "Settings",
+        "icon": "settings",
+        "children": [
+          {
+            "name": "Settings",
+            "url": "/settings"
+          }
+        ]
+      },
+      {
+        "name": "Sample Apps",
+        "icon": "bolt",
+        "children": [
+          {
+            "name": "Demo1",
+            "url": "/demo1"
+          },
+          {
+            "name": "Demo2",
+            "url": "/demo2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Money",
+    "icon": "paid_outlined",
+    "children": [
+      {
+        "name": "Money",
+        "icon": "paid_outlined",
+        "children": [
+          {
+            "name": "Direct Deposit",
+            "url": "/money/direct"
+          },
+          {
+            "type": "seperator"
+          },
+          {
+            "name": "My paystub (Coming Soon)",
+            "url": "/money/paystub"
+          }
+        ]
+      }
+    ]
+  }
 ]

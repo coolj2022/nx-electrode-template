@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import SideNav, { SideNavProps, MainNavItemType } from './SideNav';
@@ -16,16 +17,25 @@ const Template: Story<SideNavProps> = (args) => {
     setNavOpened(status);
   };
 
+  const theme = createTheme();
+
   return (
-    <BrowserRouter>
-      <Header isNavOpened={isNavOpened} onNavOpen={handleNavOpen} />
-      <Container>
-        <SideNav isNavOpened={isNavOpened} onNavOpen={handleNavOpen} menuData={args.menuData} position={args.position} />
-        <Main />
-      </Container>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Header isNavOpened={isNavOpened} onNavOpen={handleNavOpen} />
+        <Container>
+          <SideNav
+            isNavOpened={isNavOpened}
+            onNavOpen={handleNavOpen}
+            menuData={args.menuData}
+            position={args.position}
+          />
+          <Main />
+        </Container>
+      </BrowserRouter>
+    </ThemeProvider>
   );
-}
+};
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +45,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-  background: #E5E5E5;
+  background: #e5e5e5;
   flex: 1;
   width: 100%;
   @media (min-width: 1024px) {
@@ -47,94 +57,94 @@ const Main = styled.main`
 `;
 
 const menuData = [
-	{
-		"name": "Me@Home",
-		"icon": "Associate",
-		"children": [
-			{
-				"name": "Home",
-				"icon": "home",
-				"children": [
-					{
-						"name": "Home",
-						"url": "/home"
-					}
-				]
-			},
-			{
-				"name": "My Profile",
-				"icon": "contact_mail_outlined",
-				"children": [
-					{
-						"name": "Me",
-						"url": "/profile/me"
-					},
-					{
-						"name": "Career",
-						"url": "/profile/career"
-					}
-				]
-			},
-			{
-				"name": "Approvals Inbox",
-				"icon": "mail_outline",
-				"children": [
-					{
-						"name": "All",
-						"url": "/inbox/all"
-					},
-					{
-						"name": "People",
-						"url": "/inbox/people"
-					},
-					{
-						"name": "Technology",
-						"url": "/inbox/technology"
-					}
-				]
-			},
-			{
-				"name": "Settings",
-				"icon": "settings",
-				"children": [
-					{
-						"name": "Settings",
-						"url": "/settings"
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Money",
-		"icon": "paid_outlined",
-		"children": [
-			{
-				"name": "Money",
-				"icon": "paid_outlined",
-				"children": [
-					{
-						"name": "Direct Deposit",
-						"url": "/money/direct"
-					},
-					{
-						"type": "seperator"
-					},
-					{
-						"name": "My paystub (Coming Soon)",
-						"url": "/money/paystub"
-					}
-				]
-			}
-		]
-	}
+  {
+    name: 'Me@Home',
+    icon: 'home',
+    children: [
+      {
+        name: 'Home',
+        icon: 'home',
+        children: [
+          {
+            name: 'Home',
+            url: '/home',
+          },
+        ],
+      },
+      {
+        name: 'My Profile',
+        icon: 'contact_mail_outlined',
+        children: [
+          {
+            name: 'Me',
+            url: '/profile/me',
+          },
+          {
+            name: 'Career',
+            url: '/profile/career',
+          },
+        ],
+      },
+      {
+        name: 'Approvals Inbox',
+        icon: 'mail_outline',
+        children: [
+          {
+            name: 'All',
+            url: '/inbox/all',
+          },
+          {
+            name: 'People',
+            url: '/inbox/people',
+          },
+          {
+            name: 'Technology',
+            url: '/inbox/technology',
+          },
+        ],
+      },
+      {
+        name: 'Settings',
+        icon: 'settings',
+        children: [
+          {
+            name: 'Settings',
+            url: '/settings',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Money',
+    icon: 'paid_outlined',
+    children: [
+      {
+        name: 'Money',
+        icon: 'paid_outlined',
+        children: [
+          {
+            name: 'Direct Deposit',
+            url: '/money/direct',
+          },
+          {
+            type: 'seperator',
+          },
+          {
+            name: 'My paystub (Coming Soon)',
+            url: '/money/paystub',
+          },
+        ],
+      },
+    ],
+  },
 ] as MainNavItemType[];
 
 export const Primary = Template.bind({});
 Primary.args = {
-  menuData: menuData
+  menuData: menuData,
 };
 
 Primary.parameters = {
   layout: 'fullscreen',
-}
+};
