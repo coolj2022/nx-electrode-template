@@ -26,7 +26,7 @@ export const Header = ({ isNavOpened, onNavOpen }: HeaderProps) => {
     <div className={styles['header']}>
       <div className={styles['left-nav']}>
         <Typography variant='h4' component='h2'>
-          Walmart
+          Electrode App
         </Typography>
         <Icon className={styles['nav-spark']}>face</Icon>
       </div>
