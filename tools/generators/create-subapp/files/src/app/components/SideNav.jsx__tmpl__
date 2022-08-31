@@ -1,8 +1,5 @@
 import React from 'react';
-import { Car, Article, Flash, Home, Store, Gear } from '@livingdesign/icons';
-import { SideNavigation, SideNavigationItem } from '@walmart-web/livingdesign-components';
 import { useHistory } from 'react-router-dom';
-// import { sendEvent } from '@nextech/homeoffice-web-utils';
 const SideNav = () => {
   let history = useHistory();
 
@@ -14,57 +11,51 @@ const SideNav = () => {
 
   return (
     <>
-      <SideNavigation>
-        <SideNavigationItem
+      <ul>
+        <li
           onClick={() => {
             routeChange('/home');
           }}
-          leading={<Home />}
         >
           Home
-        </SideNavigationItem>
+        </li>
 
-        <SideNavigationItem
+        <li
           onClick={() => {
             routeChange('/routing');
           }}
-          leading={<Car />}
         >
           Routing
-        </SideNavigationItem>
-        <SideNavigationItem
+        </li>
+        <li
           onClick={() => {
             routeChange('/ui-logging');
           }}
-          leading={<Article />}
         >
           UI-Logging
-        </SideNavigationItem>
-        <SideNavigationItem
+        </li>
+        <li
           onClick={() => {
             routeChange('/redux-demo');
           }}
-          leading={<Store />}
         >
           Redux
-        </SideNavigationItem>
-        <SideNavigationItem
+        </li>
+        <li
           onClick={() => {
             routeChange('/living-design');
           }}
-          leading={<Flash />}
         >
           Living design
-        </SideNavigationItem>
-        <SideNavigationItem
+        </li>
+        <li
           onClick={() => {
             routeChange('/ui-config');
           }}
-          leading={<Gear />}
         >
           UI Configurations
-        </SideNavigationItem>
-      </SideNavigation>
+        </li>
+      </ul>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import logger from '@walmart/electrode-ui-logger';
+import logger from 'electrode-ui-logger';
 
 /**
  * Helpers & utility methods. Functions here will be packaged into a lib in the future

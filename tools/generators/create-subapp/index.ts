@@ -36,7 +36,7 @@ export default async function (tree: Tree, schema: Schema) {
   updateJson(tree, 'tsconfig.base.json', (tsConfig) => {
     tsConfig.compilerOptions = tsConfig.compilerOptions ?? {};
     tsConfig.compilerOptions.paths = tsConfig.compilerOptions.paths ?? {};
-    tsConfig.compilerOptions.paths[`@homeoffice-web/${name}`] = [
+    tsConfig.compilerOptions.paths[`${name}`] = [
       `packages/${name}/src/index.ts`
     ];
     return tsConfig;

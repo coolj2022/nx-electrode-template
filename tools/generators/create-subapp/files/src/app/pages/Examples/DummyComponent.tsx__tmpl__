@@ -1,5 +1,5 @@
 import React from 'react';
-import { Body } from '@walmart-web/livingdesign-components';
+import { Typography } from '@mui/material';
 export const DummyComponent = ({ dynamic }) => {
   return (
     <div
@@ -10,9 +10,10 @@ export const DummyComponent = ({ dynamic }) => {
         margin: '50px',
       }}
     >
-      <Body>
-        Dummy Component to demonstrate nested routing {dynamic}. Use browser back button to go back
-      </Body>
+      <Typography variant='body1'>
+        Dummy Component to demonstrate nested routing {dynamic}. Use browser
+        back button to go back
+      </Typography>
     </div>
   );
 };

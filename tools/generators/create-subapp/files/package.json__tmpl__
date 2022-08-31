@@ -1,5 +1,5 @@
 {
-  "name": "@homeoffice-web/<%= name %>",
+  "name": "<%= name %>",
   "main": "src/index.ts",
   "version": "0.0.0",
   "scripts": {},
