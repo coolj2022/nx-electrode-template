@@ -6,7 +6,7 @@ import {
   getWorkspaceLayout,
   joinPathFragments,
   generateFiles,
-  updateJson
+  updateJson,
 } from '@nrwl/devkit';
 
 interface Schema {
@@ -28,7 +28,7 @@ export default async function (tree: Tree, schema: Schema) {
       className,
       constantName,
       fileName,
-      tmpl: ''
+      tmpl: '',
     }
   );
 
@@ -37,7 +37,7 @@ export default async function (tree: Tree, schema: Schema) {
     tsConfig.compilerOptions = tsConfig.compilerOptions ?? {};
     tsConfig.compilerOptions.paths = tsConfig.compilerOptions.paths ?? {};
     tsConfig.compilerOptions.paths[`${name}`] = [
-      `packages/${name}/src/index.ts`
+      `packages/${name}/src/index.ts`,
     ];
     return tsConfig;
   });
