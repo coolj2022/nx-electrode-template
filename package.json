@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn workspace core run dev",
-    "storybook": "yarn nx run ui:storybook"
+    "storybook": "yarn nx run ui:storybook",
+    "test": "yarn nx affected:test"
   },
   "private": true,
   "dependencies": {

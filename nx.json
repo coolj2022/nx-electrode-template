@@ -38,6 +38,5 @@
   },
   "cli": {
     "defaultCollection": "@nrwl/react"
-  },
-  "defaultProject": "core"
+  }
 }

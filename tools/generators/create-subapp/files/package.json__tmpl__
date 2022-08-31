@@ -2,7 +2,9 @@
   "name": "<%= name %>",
   "main": "src/index.ts",
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
   "dependencies": {},
   "devDependencies": {}
 }
