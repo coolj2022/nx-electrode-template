@@ -7,7 +7,7 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
           "build",
@@ -15,7 +15,8 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "accessToken": "MGZmNmJmNmQtN2NkZC00MWI4LWEyMDMtNzk3Y2U1ZDE2OTExfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -38,5 +39,5 @@
   "cli": {
     "defaultCollection": "@nrwl/react"
   },
-  "defaultProject": "design"
+  "defaultProject": "core"
 }
