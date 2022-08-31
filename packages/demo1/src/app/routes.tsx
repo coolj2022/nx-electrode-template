@@ -6,11 +6,9 @@ import LivingDesign from './pages/Examples/LivingDesign';
 import Logging from './pages/Examples/Logging';
 import ReduxDemo from './pages/Examples/Redux/index';
 import Routing from './pages/Examples/Routing';
+import UIConfig from './pages/Examples/UIConfig';
 import HomePage from './pages/HomePage';
 import PageNotFound from './pages/NotFoundPage';
-import { subApp as subapp1SubApp } from '@homeoffice-web/subapp1';
-
-const Subapp1 = createDynamicComponent(subapp1SubApp, { ssr: false });
 
 const Routes = () => {
   return (
@@ -21,7 +19,7 @@ const Routes = () => {
       <Route path="/ui-logging" component={Logging}></Route>
       <Route path="/living-design" component={LivingDesign}></Route>
       <Route path="/redux-demo" component={ReduxDemo}></Route>
-      <Route path="/ui-config" component={Subapp1}></Route>
+      <Route path="/ui-config" component={UIConfig}></Route>
       <Route path="/link1">
         <DummyComponent dynamic={1} />
       </Route>

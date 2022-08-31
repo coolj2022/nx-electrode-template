@@ -10,7 +10,7 @@ import { ElectrodeFastifyInstance } from "@xarc/fastify-server";
  */
 export function addCoreRoute(server: ElectrodeFastifyInstance) {
   const homeRenderer: PageRenderer = new PageRenderer({
-    pageTitle: "Homeoffice Web",
+    pageTitle: "Electrode Web App",
     subApps: [
       { name: Layout.name, ssr: false },
     ],

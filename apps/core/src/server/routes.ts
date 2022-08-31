@@ -1,6 +1,5 @@
 import { ElectrodeFastifyInstance } from "@xarc/fastify-server";
 import { addCoreRoute } from "./route-core";
-// import { additionalRoutes } from "./route-support";
 
 /**
  * Fastify plugin to setup application routes
@@ -13,5 +12,4 @@ import { addCoreRoute } from "./route-core";
  */
 export async function fastifyPlugin(server: ElectrodeFastifyInstance) {
   addCoreRoute(server);
-  // additionalRoutes(server);
 }

@@ -6,10 +6,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import Cookies from 'electrode-cookies';
 import Home from './containers/HomePage';
-//  import { reduxReducers as libReducers, setUserInfo } from '@nextech/homeoffice-web-utils'
-import { subApp as demo1SubApp, reducers as demo1Reducers } from '@homeoffice-web/demo1';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Header, SideNav } from '@homeoffice-web/ui';
+import { subApp as demo1SubApp, reducers as demo1Reducers } from 'demo1';
+import { Header, SideNav } from 'ui';
 import menuData from '../common/menu';
 
 const Demo1 = createDynamicComponent(demo1SubApp, { ssr: false });

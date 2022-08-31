@@ -1,9 +1,9 @@
 {
-  "name": "@homeoffice-web/root",
+  "name": "root",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn workspace @homeoffice-web/core run dev",
+    "dev": "yarn workspace core run dev",
     "storybook": "yarn nx run ui:storybook"
   },
   "private": true,
@@ -24,11 +24,11 @@
     "@nrwl/storybook": "14.1.5",
     "@nrwl/web": "14.1.5",
     "@nrwl/workspace": "14.1.5",
-    "@storybook/addon-essentials": "~6.4.12",
-    "@storybook/builder-webpack5": "~6.4.12",
-    "@storybook/core-server": "~6.4.12",
-    "@storybook/manager-webpack5": "~6.4.12",
-    "@storybook/react": "~6.4.12",
+    "@storybook/addon-essentials": "~6.3.12",
+    "@storybook/builder-webpack5": "~6.3.12",
+    "@storybook/core-server": "~6.3.12",
+    "@storybook/manager-webpack5": "~6.3.12",
+    "@storybook/react": "~6.3.12",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/react": "13.3.0",
     "@types/jest": "27.4.1",
