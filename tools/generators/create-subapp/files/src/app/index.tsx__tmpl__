@@ -2,14 +2,12 @@ import React from 'react';
 
 import SideNav from './components/SideNav';
 import Routes from './routes';
-import { ui as uiConfig } from '@walmart/electrode-ui-config';
 
 /**
 import { Routes } from './routes';
  * App entry. Can replace the code below with actual Subapp code.
  */
 export const App = () => {
-  console.log('Found UI Config ', uiConfig?.googleAnalytics?.scriptUrl);
   return (
     <div style={styles.container}>
       <div style={styles.leftPanel}>

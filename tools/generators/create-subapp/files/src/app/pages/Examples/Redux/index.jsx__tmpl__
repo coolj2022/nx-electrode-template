@@ -1,12 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '@xarc/react-redux';
+import { Button, Card, Divider, Typography } from '@mui/material';
 
-import { Body, Button, Card, Divider, Heading } from '@walmart-web/livingdesign-components';
-import '@livingdesign/bogle/dist/Bogle.css';
-import '@walmart-web/livingdesign-components/index.esm.css';
 import { getInfo } from './selectors';
 import { updateSomething } from './actions';
-import { getUserInfo } from '@nextech/homeoffice-web-utils';
 
 export const ReduxDemo = () => {
   const dispatch = useDispatch();
@@ -21,8 +18,8 @@ export const ReduxDemo = () => {
       }}
     >
       <Divider />
-      <Body as='div' size='small' weight={400}>
-        <Heading>Redux State Sharing</Heading>
+      <Typography variant='body1' component='div'>
+        <Typography variant='h2'>Redux State Sharing</Typography>
         <div
           style={{
             display: 'flex',
@@ -31,17 +28,19 @@ export const ReduxDemo = () => {
             padding: 20,
           }}
         >
-          <Heading as='h2' size='medium'>
+          <Typography variant="h5">
             Core App State
-          </Heading>
+          </Typography>
           <Card style={{ padding: 20 }}>
-            <Heading as='h4' size='small'>
-              Name: {useSelector(getUserInfo)?.name}
-            </Heading>
-            <Heading as='h4' size='small'>
-              Login Id: {useSelector(getUserInfo)?.loginId}
-            </Heading>
-            <Body style={{ wordBreak: 'break-all' }}>Auth Token: {useSelector(getUserInfo)?.access_token}</Body>
+            <Typography variant="h4">
+              Name:
+            </Typography>
+            <Typography variant="h4">
+              Login Id:
+            </Typography>
+            <Typography variant='body1' style={{ wordBreak: 'break-all' }}>
+              Auth Token:
+            </Typography>
           </Card>
         </div>
         <div
@@ -52,26 +51,29 @@ export const ReduxDemo = () => {
             padding: 20,
           }}
         >
-          <Heading as='h2' size='medium'>
+          <Typography variant="h5">
             Sub App State
-          </Heading>
+          </Typography>
           <Card style={{ padding: 20 }}>
-            <Heading as='h4' size='small'>
+            <Typography variant="h4" fontSize="small">
               Data: {useSelector(getInfo)?.msg}
-            </Heading>
+            </Typography>
             <div>
               <Button
-                variant='secondary'
-                type='button'
-                size='small'
-                onClick={() => dispatch(updateSomething({ msg: 'Subapp State' + Math.random() }))}
+                color="secondary"
+                fontSize="small"
+                onClick={() =>
+                  dispatch(
+                    updateSomething({ msg: 'Subapp State' + Math.random() })
+                  )
+                }
               >
                 Update Sub App State
               </Button>
             </div>
           </Card>
         </div>
-      </Body>
+      </Typography>
     </div>
   );
 };

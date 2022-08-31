@@ -1,10 +1,7 @@
 import React from 'react';
-import { Body, Heading } from '@walmart-web/livingdesign-components';
-import { ui as uiConfig } from '@walmart/electrode-ui-config';
+import { Typography } from '@mui/material';
 
 export const UIConfig = () => {
-  const analyticsScript = uiConfig?.googleAnalytics?.scriptUrl;
-  const analyticsId = uiConfig?.googleAnalytics?.measurementId;
   return (
     <div
       style={{
@@ -16,21 +13,23 @@ export const UIConfig = () => {
         flexDirection: 'column',
       }}
     >
-      <Heading>UI Config</Heading>
-      <Body>
-        The subapp can access UI config setup per environment via electrode-ui-config lib. The ui
-        config property set are as below and for more documentation on UI config check{' '}
-        <a
-          href='https://gecgithub01.walmart.com/electrode/gtp-js/tree/main/packages/electrode-ui-config'
-          target='_blank'
-          rel='noreferrer'
+      <Typography variant='h3'>UI Config</Typography>
+      <Typography variant='body1'>
+        The subapp can access UI config setup per environment via
+        electrode-ui-config lib. The ui config property set are as below and for
+        more documentation on UI config check
+        <pre
+          style={{
+            display: 'flex',
+            textAlign: 'left',
+            justifyContent: 'center',
+          }}
         >
-          here
-        </a>
-        <pre style={{ display: 'flex', textAlign: 'left', justifyContent: 'center' }}>
-          {JSON.stringify(uiConfig, undefined, 2)}
+          {JSON.stringify({
+            'body': 'abcd'
+          }, undefined, 2)}
         </pre>
-      </Body>
+      </Typography>
     </div>
   );
 };

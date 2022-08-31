@@ -1,6 +1,6 @@
-import { Body, Heading } from '@walmart-web/livingdesign-components';
 import React from 'react';
-import Cookies from '@walmart/electrode-cookies';
+import { Typography } from '@mui/material';
+import Cookies from 'electrode-cookies';
 
 export const HomePage = () => {
   let ssoUserInfo, userName;
@@ -21,20 +21,21 @@ export const HomePage = () => {
         margin: '50px',
       }}
     >
-      <Heading as='h3' size='medium' weight={700}>
+      <Typography variant='h3'>
         Welcome {userName},
-      </Heading>
-      <Heading as='h3' size='medium' weight={700}>
+      </Typography>
+      <Typography variant='h3'>
         Me@HO SubApp Template
-      </Heading>
-      <Body>
-        Subapps represent a novel approach for developing web applications with electrode. At its
-        core, a subapp is a component, and if React is used - a subapp is a React component. There
-        are several advantages to creating a web application from subapps: Superior code isolation -
-        conducive to development across multiple teams; Smaller initial payloads - loads through
-        lazy-loadable subapps; Improved application scalability. Teams can use this page as starting
-        point to their apps
-      </Body>
+      </Typography>
+      <Typography variant='body1'>
+        Subapps represent a novel approach for developing web applications with
+        electrode. At its core, a subapp is a component, and if React is used -
+        a subapp is a React component. There are several advantages to creating
+        a web application from subapps: Superior code isolation - conducive to
+        development across multiple teams; Smaller initial payloads - loads
+        through lazy-loadable subapps; Improved application scalability. Teams
+        can use this page as starting point to their apps
+      </Typography>
     </div>
   );
 };

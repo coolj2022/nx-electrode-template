@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Body, Button, Heading } from '@walmart-web/livingdesign-components';
+import { Typography, Button } from '@mui/material';
 /**
  * Example for routing. The core app has subapp entry routes defined in subapp-routes.json.
  * Below is an example of routing within subapp
@@ -24,14 +24,14 @@ export const Routing = () => {
         flexDirection: 'column',
       }}
     >
-      <Heading as='h3' size='medium' weight={700}>
+      <Typography component="h3" fontWeight={700}>
         Nested Routing
-      </Heading>
-      <Body>
-        This example explains how nested routing works withing subapps where core can have its own
-        routing and subapp can have its own routing. You can refer to src/routes.js to add your sub
-        app routes
-      </Body>
+      </Typography>
+      <Typography variant='body1'>
+        This example explains how nested routing works withing subapps where
+        core can have its own routing and subapp can have its own routing. You
+        can refer to src/routes.js to add your sub app routes
+      </Typography>
       <div
         style={{
           display: 'flex',
@@ -40,6 +40,7 @@ export const Routing = () => {
         }}
       >
         <Button
+          variant="contained"
           onClick={() => {
             routeChange('/link1');
           }}
@@ -48,6 +49,7 @@ export const Routing = () => {
           Load Dummy Component at link 1
         </Button>
         <Button
+          variant="contained"
           onClick={() => {
             routeChange('/link2');
           }}

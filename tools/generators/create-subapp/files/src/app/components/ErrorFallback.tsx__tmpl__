@@ -1,6 +1,6 @@
 import React from 'react';
 import { FallbackProps } from 'react-error-boundary';
-import { Body, Button, Heading } from '@walmart-web/livingdesign-components';
+import { Typography, Button } from '@mui/material';
 
 export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
   return (
@@ -16,10 +16,12 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
         height: '100%',
       }}
     >
-      <Heading>Something went wrong</Heading>
-      <Body>Will send the error - {error.message || ''} to server and log it.</Body>
+      <Typography variant='h3'>Something went wrong</Typography>
+      <Typography variant='body1'>
+        Will send the error - {error.message || ''} to server and log it.
+      </Typography>
       <div>
-        <Button variant='primary' onClick={resetErrorBoundary}>
+        <Button color='primary' variant='text' onClick={resetErrorBoundary}>
           Reset State
         </Button>
       </div>

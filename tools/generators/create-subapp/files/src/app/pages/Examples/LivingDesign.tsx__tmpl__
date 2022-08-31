@@ -1,5 +1,5 @@
 import React from 'react';
-import { Body, Heading } from '@walmart-web/livingdesign-components';
+import { Typography } from '@mui/material';
 
 export const LivingDesign = () => {
   return (
@@ -13,14 +13,15 @@ export const LivingDesign = () => {
         flexDirection: 'column',
       }}
     >
-      <Heading>Living Design</Heading>
-      <Body>
-        The subapp has living designs UI library integrated for design consistency across subapps
-        and core. Check the Living Design Documentation test
-        <a href='https://wmlink/ld3' target='_blank' rel='noreferrer'>
+      <Typography variant='h1' component='h2'>Material UI</Typography>
+      <Typography variant='body1' component='div'>
+        The subapp has material UI library integrated for design
+        consistency across subapps and core. Check the Material UI
+        Documentation test
+        <a href='https://mui.com/material-ui/getting-started/overview/' target='_blank' rel='noreferrer'>
           here
         </a>
-      </Body>
+      </Typography>
     </div>
   );
 };
