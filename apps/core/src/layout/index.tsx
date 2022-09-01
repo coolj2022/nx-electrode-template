@@ -10,10 +10,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Header, SideNav } from 'ui';
 import menuData from '../common/menu';
 import { subApp as demo1SubApp, reducers as demo1Reducers } from 'demo1';
-import { subApp as test1SubApp, reducers as test1Reducers } from 'Test-sub_app';
 
 const Demo1 = createDynamicComponent(demo1SubApp, { ssr: false });
-const Test1 = createDynamicComponent(test1SubApp, { ssr: false });
 
 const Layout = (props) => {
   const dispatch = useDispatch();
@@ -58,9 +56,6 @@ const Layout = (props) => {
               <Route path="/demo1">
                 <Demo1 />
               </Route>
-              <Route path="/test1">
-                <Test1 />
-              </Route>
             </Switch>
           </Main>
         </Container>
@@ -91,8 +86,7 @@ const Main = styled.main`
 export const reduxReducers = Object.assign(
   {},
   // libReducers,
-  demo1Reducers,
-  test1Reducers
+  demo1Reducers
 );
 
 export const subapp: ReactSubApp = {
