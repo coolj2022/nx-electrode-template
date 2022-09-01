@@ -58,7 +58,7 @@ const Main = styled.main`
 
 const menuData = [
   {
-    name: 'Me@Home',
+    name: 'Home',
     icon: 'home',
     children: [
       {

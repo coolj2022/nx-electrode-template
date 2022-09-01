@@ -1,13 +1,17 @@
-import { ConnectionConfig, PluginsConfig, ElectrodeServerConfig } from "@xarc/fastify-server";
+import {
+  ConnectionConfig,
+  PluginsConfig,
+  ElectrodeServerConfig,
+} from '@xarc/fastify-server';
 
 //
 // specify connection info for fastify server
 //
 const connection: ConnectionConfig = {
-  host: process.env.HOST || "localhost",
+  host: process.env.HOST || 'localhost',
   // The env APP_SERVER_PORT allows Electrode X to control app's listening port during dev
   // to serve both static assets and app under a unified proxy port
-  port: parseInt(process.env.APP_SERVER_PORT || process.env.PORT || "3000"),
+  port: parseInt(process.env.APP_SERVER_PORT || process.env.PORT || '3000'),
 };
 
 //
@@ -17,7 +21,7 @@ const plugins: PluginsConfig = {
   /**
    * Register the dev support plugin
    */
-  "@xarc/app-dev": {
+  '@xarc/app-dev': {
     priority: -1,
     enable: Boolean(process.env.WEBPACK_DEV),
   },
@@ -28,7 +32,7 @@ const plugins: PluginsConfig = {
    * Register the plugin to setup routes
    */
   routes: {
-    module: "./routes",
+    module: './routes',
   },
 };
 

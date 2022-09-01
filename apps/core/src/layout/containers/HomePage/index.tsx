@@ -13,7 +13,7 @@ const Home = (props) => {
   return (
     <>
       <Switch>
-        <Route exact path='/home'>
+        <Route exact path="/home">
           <div
             style={{
               textAlign: 'center',
@@ -22,7 +22,9 @@ const Home = (props) => {
               wordWrap: 'break-word',
             }}
           >
-            <Typography variant='h3' fontWeight={400}>Welcome </Typography>
+            <Typography variant="h3" fontWeight={400}>
+              Welcome Home
+            </Typography>
           </div>
         </Route>
       </Switch>

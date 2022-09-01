@@ -1,5 +1,5 @@
-import { PageRenderer } from "@xarc/react";
-import { ElectrodeFastifyInstance } from "@xarc/fastify-server";
+import { PageRenderer } from '@xarc/react';
+import { ElectrodeFastifyInstance } from '@xarc/fastify-server';
 
 /**
  * A fastify route prehandler to set the cookie SSO_CRED with SSO auth credentials
@@ -22,7 +22,7 @@ export const setSsoCredCookie = (request, reply, done) => {
 export const getAuthPreHandler = (
   server: ElectrodeFastifyInstance,
   additionalHandlers = [setSsoCredCookie],
-  _url: string = ""
+  _url: string = ''
 ): any => {
   // return (server as any).auth([server[authSchemeName]].concat(additionalHandlers), {
   //   run: "all",

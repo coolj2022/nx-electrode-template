@@ -1,5 +1,5 @@
-"use strict";
-const { babelPresetFile } = require("@xarc/app-dev");
+'use strict';
+const { babelPresetFile } = require('@xarc/app-dev');
 module.exports = {
   presets: [babelPresetFile],
 };

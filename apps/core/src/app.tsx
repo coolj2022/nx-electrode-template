@@ -1,8 +1,8 @@
-import { declareSubApp, xarcV2 } from "@xarc/react";
+import { declareSubApp, xarcV2 } from '@xarc/react';
 
 export const Layout = declareSubApp({
-  name: "Layout",
-  getModule: () => import("./layout"),
+  name: 'Layout',
+  getModule: () => import('./layout'),
 });
 
-xarcV2.debug("app.tsx");
+xarcV2.debug('app.tsx');

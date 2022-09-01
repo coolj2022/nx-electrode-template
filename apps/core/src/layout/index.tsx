@@ -7,11 +7,13 @@ import styled from 'styled-components';
 import Cookies from 'electrode-cookies';
 import Home from './containers/HomePage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { subApp as demo1SubApp, reducers as demo1Reducers } from 'demo1';
 import { Header, SideNav } from 'ui';
 import menuData from '../common/menu';
+import { subApp as demo1SubApp, reducers as demo1Reducers } from 'demo1';
+import { subApp as test1SubApp, reducers as test1Reducers } from 'Test-sub_app';
 
 const Demo1 = createDynamicComponent(demo1SubApp, { ssr: false });
+const Test1 = createDynamicComponent(test1SubApp, { ssr: false });
 
 const Layout = (props) => {
   const dispatch = useDispatch();
@@ -40,16 +42,24 @@ const Layout = (props) => {
       <BrowserRouter>
         <Header isNavOpened={isNavOpened} onNavOpen={handleNavOpen} />
         <Container>
-          <SideNav menuData={menuData} isNavOpened={isNavOpened} onNavOpen={handleNavOpen} position='left' />
+          <SideNav
+            menuData={menuData}
+            isNavOpened={isNavOpened}
+            onNavOpen={handleNavOpen}
+            position="left"
+          />
           <Main>
             <Switch>
-              <Redirect key='root-to-home' from='/' to='/home' exact />
-              <Route path='/home'>
+              <Redirect key="root-to-home" from="/" to="/home" exact />
+              <Route path="/home">
                 <Home />
               </Route>
               {/* define additional routes here */}
-              <Route path='/demo1'>
+              <Route path="/demo1">
                 <Demo1 />
+              </Route>
+              <Route path="/test1">
+                <Test1 />
               </Route>
             </Switch>
           </Main>
@@ -67,7 +77,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-  background: #E5E5E5;
+  background: #e5e5e5;
   flex: 1;
   width: 100%;
   @media (min-width: 1024px) {
@@ -78,9 +88,11 @@ const Main = styled.main`
   }
 `;
 
-export const reduxReducers = Object.assign({},
+export const reduxReducers = Object.assign(
+  {},
   // libReducers,
   demo1Reducers,
+  test1Reducers
 );
 
 export const subapp: ReactSubApp = {

@@ -31,9 +31,6 @@
     "node": ">= 12",
     "npm": ">= 6"
   },
-  "prettier": {
-    "printWidth": 100
-  },
   "dependencies": {
     "demo1": "*",
     "ui": "*",

@@ -1,11 +1,11 @@
-import { loadDevTasks, xrun } from "@xarc/app-dev";
+import { loadDevTasks, xrun } from '@xarc/app-dev';
 
 xrun.updateEnv(
   {
     /**
      * Configure local development with http://localhost:3000
      */
-    HOST: "localhost",
+    HOST: 'localhost',
     /**
      * In dev mode, a proxy server listens at `PORT` and forward requests to
      * to actual node.js app server and webpack dev server.
@@ -34,6 +34,6 @@ loadDevTasks(xrun, {
   // options to customize features
   webpackOptions: {
     // enable CSS module for files other than `.mod.css`
-    cssModuleSupport: "byModExt",
+    cssModuleSupport: 'byModExt',
   },
 });

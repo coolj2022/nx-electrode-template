@@ -1,11 +1,11 @@
-import Fs from "fs";
-import Path from "path";
-import zlib from "zlib";
+import Fs from 'fs';
+import Path from 'path';
+import zlib from 'zlib';
 import {
   ConnectionConfig,
   PluginsConfig,
   PluginOptions,
-} from "@xarc/fastify-server";
+} from '@xarc/fastify-server';
 
 const defaultListenPort = 3000;
 
@@ -33,8 +33,8 @@ export const portFromEnv = () => {
  * @returns
  */
 export function readZ64File(filename: string): string {
-  const input = Fs.readFileSync(filename, "utf-8");
-  return zlib.inflateSync(Buffer.from(input, "base64")).toString();
+  const input = Fs.readFileSync(filename, 'utf-8');
+  return zlib.inflateSync(Buffer.from(input, 'base64')).toString();
 }
 
 /**
@@ -43,7 +43,7 @@ export function readZ64File(filename: string): string {
  * @returns SOARI service key for QA env
  */
 export function getSoariQaKey(): string {
-  return readZ64File(Path.join(__dirname, "../../../config/soari-qa-key.z64"));
+  return readZ64File(Path.join(__dirname, '../../../config/soari-qa-key.z64'));
 }
 
 /**
@@ -51,7 +51,7 @@ export function getSoariQaKey(): string {
  */
 export const connection: ConnectionConfig = {
   host: process.env.HOST,
-  address: process.env.HOST_IP || "0.0.0.0",
+  address: process.env.HOST_IP || '0.0.0.0',
   port: portFromEnv(),
 };
 
@@ -59,9 +59,9 @@ export const connection: ConnectionConfig = {
  * Specify plugins to register with fastify
  */
 export const plugins: PluginsConfig = {
-  "@xarc/app-dev": {
+  '@xarc/app-dev': {
     priority: -1,
-    enable: process.env.WEBPACK_DEV === "true",
+    enable: process.env.WEBPACK_DEV === 'true',
   } as PluginOptions,
 
   // set require from path so can use "../routes" to load the routes plugin below
@@ -70,6 +70,6 @@ export const plugins: PluginsConfig = {
    * Register the plugin to setup routes
    */
   routes: {
-    module: "../routes",
+    module: '../routes',
   },
 };

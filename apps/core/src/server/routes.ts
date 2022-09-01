@@ -1,5 +1,5 @@
-import { ElectrodeFastifyInstance } from "@xarc/fastify-server";
-import { addCoreRoute } from "./route-core";
+import { ElectrodeFastifyInstance } from '@xarc/fastify-server';
+import { addCoreRoute } from './route-core';
 
 /**
  * Fastify plugin to setup application routes

@@ -6,4 +6,3 @@
 //  * add it to the switch statement in the reducer function
 //  *
 //  */
-
