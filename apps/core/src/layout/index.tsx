@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactSubApp, createDynamicComponent } from '@xarc/react';
 import { reduxFeature, useDispatch } from '@xarc/react-redux';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Cookies from 'electrode-cookies';
 import Home from './containers/HomePage';
@@ -47,16 +47,12 @@ const Layout = (props) => {
             position="left"
           />
           <Main>
-            <Switch>
-              <Redirect key="root-to-home" from="/" to="/home" exact />
-              <Route path="/home">
-                <Home />
-              </Route>
+            <Routes>
+              <Route path="/" element={<Navigate to="/home" />} />
+              <Route path="/home" element={<Home />} />
               {/* define additional routes here */}
-              <Route path="/demo1">
-                <Demo1 />
-              </Route>
-            </Switch>
+              <Route path="/demo1" element={<Demo1 />} />
+            </Routes>
           </Main>
         </Container>
       </BrowserRouter>

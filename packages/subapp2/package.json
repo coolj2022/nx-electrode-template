@@ -1,0 +1,10 @@
+{
+  "name": "subapp2",
+  "main": "src/index.ts",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

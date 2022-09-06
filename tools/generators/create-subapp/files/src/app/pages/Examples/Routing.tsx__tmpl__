@@ -1,15 +1,15 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 /**
  * Example for routing. The core app has subapp entry routes defined in subapp-routes.json.
  * Below is an example of routing within subapp
  */
 export const Routing = () => {
-  let history = useHistory();
+  let navigate = useNavigate();
   const routeChange = (routeName) => {
     let path = routeName;
-    history.push(path);
+    navigate(path);
   };
   return (
     <div

@@ -15,11 +15,7 @@ export const Component = () => {
 
 export const subapp: ReactSubApp = {
   Component: (props) => {
-    return (
-      <BrowserRouter basename="/demo1">
-        <Component {...props} />
-      </BrowserRouter>
-    );
+    return <Component {...props} />;
   },
   wantFeatures: [],
 };

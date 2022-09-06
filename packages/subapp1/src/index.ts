@@ -1,6 +1,7 @@
-import { declareSubApp } from "@xarc/react";
+import { declareSubApp } from '@xarc/react';
+export { reducers } from './app/pages/Examples/Redux/reducer';
 
 export const subApp = declareSubApp({
-  name: "Subapp1",
-  getModule: () => import("./app/subApp"),
+  name: 'Subapp1',
+  getModule: () => import('./main/subapp'),
 });
