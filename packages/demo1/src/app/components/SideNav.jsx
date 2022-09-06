@@ -1,11 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const SideNav = () => {
-  let history = useHistory();
+  let navigate = useNavigate();
 
   const routeChange = (routeName) => {
     let path = routeName;
-    history.push(path);
+    navigate(path);
     // sendEvent('Subapp template - Internal Route ', { routeName });
   };
 
@@ -54,6 +54,13 @@ const SideNav = () => {
           }}
         >
           UI Configurations
+        </li>
+        <li
+          onClick={() => {
+            routeChange('/subapp1');
+          }}
+        >
+          Subapp1
         </li>
       </ul>
     </>
