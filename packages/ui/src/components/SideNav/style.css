@@ -23,11 +23,12 @@
   width: var(--side-nav1-width);
   height: 100%;
   justify-content: center;
-  border-right: 1px solid #E3E4E5;
+  border-right: 1px solid #e3e4e5;
   background: white;
 }
 
-.main-nav ul, .sub-nav ul {
+.main-nav ul,
+.sub-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -57,21 +58,21 @@
   width: 60px;
   height: 60px;
   border-radius: 8px;
-  background: #F1F1F2;
+  background: #f1f1f2;
   color: #000;
 }
 
-.main-nav li.active  {
-  color: #0071DC;
+.main-nav li.active {
+  color: #0071dc;
 }
 
 .main-nav li.active .nav-link {
-  background: #0071DC;
+  background: #0071dc;
   color: #fff;
 }
 
 .sub-nav {
-  color: #2E2F32;
+  color: #2e2f32;
   width: var(--side-nav2-width);
   height: 100%;
   background: white;

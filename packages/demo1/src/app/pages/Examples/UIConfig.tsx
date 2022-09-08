@@ -13,8 +13,8 @@ export const UIConfig = () => {
         flexDirection: 'column',
       }}
     >
-      <Typography variant='h3'>UI Config</Typography>
-      <Typography variant='body1'>
+      <Typography variant="h3">UI Config</Typography>
+      <Typography variant="body1">
         The subapp can access UI config setup per environment via
         electrode-ui-config lib. The ui config property set are as below and for
         more documentation on UI config check
@@ -25,9 +25,13 @@ export const UIConfig = () => {
             justifyContent: 'center',
           }}
         >
-          {JSON.stringify({
-            'body': 'abcd'
-          }, undefined, 2)}
+          {JSON.stringify(
+            {
+              body: 'abcd',
+            },
+            undefined,
+            2
+          )}
         </pre>
       </Typography>
     </div>

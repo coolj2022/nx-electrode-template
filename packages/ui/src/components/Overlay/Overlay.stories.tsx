@@ -14,5 +14,5 @@ const Template: Story<OverlayProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  isOpen: false
+  isOpen: false,
 };

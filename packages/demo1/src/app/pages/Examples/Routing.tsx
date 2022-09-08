@@ -27,7 +27,7 @@ export const Routing = () => {
       <Typography component="h3" fontWeight={700}>
         Nested Routing
       </Typography>
-      <Typography variant='body1'>
+      <Typography variant="body1">
         This example explains how nested routing works withing subapps where
         core can have its own routing and subapp can have its own routing. You
         can refer to src/routes.js to add your sub app routes

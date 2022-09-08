@@ -1,6 +1,6 @@
-import { declareSubApp } from "@xarc/react";
+import { declareSubApp } from '@xarc/react';
 
 export const subApp = declareSubApp({
-  name: "Subapp1",
-  getModule: () => import("./app/subApp"),
+  name: 'Subapp1',
+  getModule: () => import('./app/subApp'),
 });

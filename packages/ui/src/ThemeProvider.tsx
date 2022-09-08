@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   createTheme,
-  ThemeProvider as MuiThemeProvider
+  ThemeProvider as MuiThemeProvider,
 } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 
@@ -17,45 +17,45 @@ const theme = createTheme(
   {
     palette: {
       primary: {
-        main: palette.blueInk2
+        main: palette.blueInk2,
       },
       secondary: {
-        main: palette.primaryPink
+        main: palette.primaryPink,
       },
       info: {
-        main: palette.myBlue
+        main: palette.myBlue,
       },
       success: {
-        main: palette.green
+        main: palette.green,
       },
     },
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h6: {
-        color: palette.blueInk2
-      }
-    }
+        color: palette.blueInk2,
+      },
+    },
   },
   {
     palette: {
-      my: palette
+      my: palette,
     },
     mixins: {
       sideBar: {
         width: 320,
-        innerWidth: 288
+        innerWidth: 288,
       },
       appBar: {
         maxHeight: 64,
-        minHeight: 48
-      }
-    }
+        minHeight: 48,
+      },
+    },
   }
 );
 
 type PropsType = {
   children?: React.ReactNode;
-}
+};
 
 export const ThemeProvider = (props: PropsType) => {
   return (
@@ -63,5 +63,5 @@ export const ThemeProvider = (props: PropsType) => {
       <CssBaseline />
       <MuiThemeProvider theme={theme}>{props.children}</MuiThemeProvider>
     </>
-  )
-}
+  );
+};
