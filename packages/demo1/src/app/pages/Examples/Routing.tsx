@@ -6,9 +6,9 @@ import { Typography, Button } from '@mui/material';
  * Below is an example of routing within subapp
  */
 export const Routing = () => {
-  let history = useHistory();
+  const history = useHistory();
   const routeChange = (routeName) => {
-    let path = routeName;
+    const path = routeName;
     history.push(path);
   };
   return (
@@ -25,7 +25,7 @@ export const Routing = () => {
       }}
     >
       <Typography component="h3" fontWeight={700}>
-        Nested Routing
+        Nested Routing2
       </Typography>
       <Typography variant="body1">
         This example explains how nested routing works withing subapps where
