@@ -7,6 +7,7 @@ This is an overview of the source control management workflow. This repository f
 ## Branch Naming Conventions
 
 Before making updates, create a new branch to do your work.
+
 Branches are named `<subapp-name>/<category>/<tracker-number>/<description>`
 
 Be sure to use [`kebab-case`](https://medium.com/javascript-in-plain-english/convert-string-to-different-case-styles-snake-kebab-camel-and-pascal-case-in-javascript-da724b7220d7) in the subapp name and feature description.
@@ -80,6 +81,8 @@ There are 2 husky hooks we defined:
 - `pre-commit`
 
   It wires up the Husky pre-commit hook to call `lint-staged`. When we have any ESLint errors, or Prettier formatting issues in our staged files (and we didn't use IDE extensions to automatically reformat on file save etc), then before the commit task runs, our files will checked and automatically fixed if possible.
+
+---
 
 ## Rebase before you make the PR, if needed
 
