@@ -1,30 +1,30 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/shared/src",
+  "sourceRoot": "packages/subapp1/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/shared",
-        "main": "packages/shared/src/index.ts",
-        "tsConfig": "packages/shared/tsconfig.lib.json",
-        "assets": ["packages/shared/*.md"]
+        "outputPath": "dist/packages/subapp1",
+        "main": "packages/subapp1/src/index.ts",
+        "tsConfig": "packages/subapp1/tsconfig.lib.json",
+        "assets": ["packages/subapp1/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/shared/src/**/*.ts"]
+        "lintFilePatterns": ["packages/subapp1/src/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/shared"],
+      "outputs": ["coverage/packages/subapp1"],
       "options": {
-        "jestConfig": "packages/shared/jest.config.ts",
+        "jestConfig": "packages/subapp1/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "yarn workspace core run dev",
     "storybook": "yarn nx run ui:storybook",
-    "test": "yarn nx affected:test"
+    "test": "yarn nx run-many --target=test --all",
+    "test:affected": "yarn nx affected:test",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -16,6 +18,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@nrwl/cli": "14.1.5",
     "@nrwl/cypress": "14.1.5",
     "@nrwl/eslint-plugin-nx": "14.1.5",
@@ -44,7 +48,9 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "babel-jest": "27.5.1",
+    "commitizen": "^4.2.5",
     "cypress": "^9.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -52,8 +58,9 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "git-cz": "^4.9.0",
+    "husky": "^8.0.0",
     "jest": "27.5.1",
+    "lint-staged": "^13.0.3",
     "nx": "14.1.5",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
@@ -66,9 +73,13 @@
     "packages/**",
     "apps/**"
   ],
+  "lint-staged": {
+    "**/src/**/*.{js,jsx,ts,tsx,css,json,md}": "prettier --write",
+    "**/src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+  },
   "config": {
     "commitizen": {
-      "path": "git-cz"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
