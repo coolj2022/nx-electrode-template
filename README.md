@@ -2,6 +2,12 @@
 
 This project was generated using [Nx](https://nx.dev). Click [here](./docs/NX.md) for more details.
 
+### Table of Contents
+
+- [Getting Started](#getting-started)
+- [Tools](#tools)
+- [Git Workflow](./docs/git_workflow.md)
+
 ## Getting Started
 
 ### Package Installation
