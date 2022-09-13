@@ -6,43 +6,45 @@ import React, { useEffect } from 'react';
 const useOnClickOutside = (ref, onClick?, parentRef?) => {
   useEffect(() => {
     function handleClickOutside(event) {
-      if (!ref.current || ref.current.contains(event.target) || (parentRef && !parentRef.current.contains(event.target)))
+      if (
+        !ref.current ||
+        ref.current.contains(event.target) ||
+        (parentRef && !parentRef.current.contains(event.target))
+      )
         return;
-        onClick && onClick();
+      onClick && onClick();
     }
 
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref]);
 };
 
 export interface OverlayProps {
   children: React.ReactNode;
-  isOpen: boolean,
+  isOpen: boolean;
   onClose?: (event: PointerEvent | MouseEvent | TouchEvent) => void;
-};
+}
 
 const Overlay = ({ isOpen, children, onClose }: OverlayProps) => {
   const panelRef = React.useRef<HTMLDivElement>(null);
   const parentRef = React.useRef<HTMLDivElement>(null);
   useOnClickOutside(panelRef, onClose, parentRef);
 
-  return (
-    !isOpen ? <></>
-    : (
-      <div style={{...styles.overlay}} ref={parentRef}>
-        <div ref={panelRef}>{children}</div>
-      </div>
-    )
+  return !isOpen ? (
+    <></>
+  ) : (
+    <div style={{ ...styles.overlay }} ref={parentRef}>
+      <div ref={panelRef}>{children}</div>
+    </div>
   );
 };
 
-Overlay.defaultProps = {
-};
+Overlay.defaultProps = {};
 
 const styles = {
   overlay: {

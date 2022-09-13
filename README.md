@@ -1,6 +1,12 @@
-# Nx Electrode
+# Nx Electrode [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This project was generated using [Nx](https://nx.dev). Click [here](./docs/NX.md) for more details.
+
+### Table of Contents
+
+- [Getting Started](#getting-started)
+- [Tools](#tools)
+- [Git Workflow](./docs/git_workflow.md)
 
 ## Getting Started
 

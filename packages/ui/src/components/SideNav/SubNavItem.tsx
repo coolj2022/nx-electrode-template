@@ -16,7 +16,7 @@ export type SubNavItemType = {
 
 export interface SubNavItemProps {
   item: SubNavItemType;
-};
+}
 
 const SubNavItem = ({ item }: SubNavItemProps) => {
   const history = useHistory();
@@ -27,24 +27,21 @@ const SubNavItem = ({ item }: SubNavItemProps) => {
     history.push(url);
   };
 
-  return (
-    item.type === 'seperator'
-      ? <Divider />
-      : (item.children ? (
-          <SubNavLinkParent item={item} />
-        ) : (
-          <li>
-            <a
-              className={classNames('nav-link', {
-                'active': item.url && location.pathname.indexOf(item.url) === 0,
-              })}
-              onClick={handleLinkClick(item.url)}
-            >
-              {item.icon && <Icon>{item.icon}</Icon>} {item.name}
-            </a>
-          </li>
-        )
-      )
+  return item.type === 'seperator' ? (
+    <Divider />
+  ) : item.children ? (
+    <SubNavLinkParent item={item} />
+  ) : (
+    <li>
+      <a
+        className={classNames('nav-link', {
+          active: item.url && location.pathname.indexOf(item.url) === 0,
+        })}
+        onClick={handleLinkClick(item.url)}
+      >
+        {item.icon && <Icon>{item.icon}</Icon>} {item.name}
+      </a>
+    </li>
   );
 };
 

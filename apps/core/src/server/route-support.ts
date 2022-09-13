@@ -22,7 +22,7 @@ export const setSsoCredCookie = (request, reply, done) => {
 export const getAuthPreHandler = (
   server: ElectrodeFastifyInstance,
   additionalHandlers = [setSsoCredCookie],
-  _url: string = ''
+  _url = ''
 ): any => {
   // return (server as any).auth([server[authSchemeName]].concat(additionalHandlers), {
   //   run: "all",
@@ -34,4 +34,5 @@ export const getAuthPreHandler = (
  *
  * @param server
  */
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const additionalRoutes = (server: ElectrodeFastifyInstance): void => {};

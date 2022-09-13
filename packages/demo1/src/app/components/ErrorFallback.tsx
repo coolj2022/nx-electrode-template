@@ -16,12 +16,12 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
         height: '100%',
       }}
     >
-      <Typography variant='h3'>Something went wrong</Typography>
-      <Typography variant='body1'>
+      <Typography variant="h3">Something went wrong</Typography>
+      <Typography variant="body1">
         Will send the error - {error.message || ''} to server and log it.
       </Typography>
       <div>
-        <Button color='primary' variant='text' onClick={resetErrorBoundary}>
+        <Button color="primary" variant="text" onClick={resetErrorBoundary}>
           Reset State
         </Button>
       </div>

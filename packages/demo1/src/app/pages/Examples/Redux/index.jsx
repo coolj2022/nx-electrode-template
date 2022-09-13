@@ -18,8 +18,8 @@ export const ReduxDemo = () => {
       }}
     >
       <Divider />
-      <Typography variant='body1' component='div'>
-        <Typography variant='h2'>Redux State Sharing</Typography>
+      <Typography variant="body1" component="div">
+        <Typography variant="h2">Redux State Sharing</Typography>
         <div
           style={{
             display: 'flex',
@@ -28,17 +28,11 @@ export const ReduxDemo = () => {
             padding: 20,
           }}
         >
-          <Typography variant="h5">
-            Core App State
-          </Typography>
+          <Typography variant="h5">Core App State</Typography>
           <Card style={{ padding: 20 }}>
-            <Typography variant="h4">
-              Name:
-            </Typography>
-            <Typography variant="h4">
-              Login Id:
-            </Typography>
-            <Typography variant='body1' style={{ wordBreak: 'break-all' }}>
+            <Typography variant="h4">Name:</Typography>
+            <Typography variant="h4">Login Id:</Typography>
+            <Typography variant="body1" style={{ wordBreak: 'break-all' }}>
               Auth Token:
             </Typography>
           </Card>
@@ -51,9 +45,7 @@ export const ReduxDemo = () => {
             padding: 20,
           }}
         >
-          <Typography variant="h5">
-            Sub App State
-          </Typography>
+          <Typography variant="h5">Sub App State</Typography>
           <Card style={{ padding: 20 }}>
             <Typography variant="h4" fontSize="small">
               Data: {useSelector(getInfo)?.msg}

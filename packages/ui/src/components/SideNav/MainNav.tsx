@@ -15,29 +15,37 @@ export interface MainNavProps {
   activeIdx: number;
   isNavOpened: boolean;
   onNavSelect: (idx: number) => void;
-};
+}
 
-const MainNav = ({ menuData, activeIdx, isNavOpened, onNavSelect }: MainNavProps) => {
+const MainNav = ({
+  menuData,
+  activeIdx,
+  isNavOpened,
+  onNavSelect,
+}: MainNavProps) => {
   const handleMainNavClick = (idx: number) => () => {
     onNavSelect(idx);
   };
 
   return (
-    <nav className={classNames('main-nav', {
-      'active': isNavOpened,
-    })}>
+    <nav
+      className={classNames('main-nav', {
+        active: isNavOpened,
+      })}
+    >
       <ul>
-        {menuData && menuData.map(( item, index ) => (
-          <li
-            key={index}
-            {...(index === activeIdx && { className: 'active' })}
-          >
-            <a className="nav-link" onClick={handleMainNavClick(index)}>
-              <Icon fontSize='medium'>{item.icon}</Icon>
-            </a>
-            <label>{item.name}</label>
-          </li>
-        ))}
+        {menuData &&
+          menuData.map((item, index) => (
+            <li
+              key={index}
+              {...(index === activeIdx && { className: 'active' })}
+            >
+              <a className="nav-link" onClick={handleMainNavClick(index)}>
+                <Icon fontSize="medium">{item.icon}</Icon>
+              </a>
+              <label>{item.name}</label>
+            </li>
+          ))}
       </ul>
     </nav>
   );

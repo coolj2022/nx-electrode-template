@@ -10,7 +10,7 @@ export const DummyComponent = ({ dynamic }) => {
         margin: '50px',
       }}
     >
-      <Typography variant='body1'>
+      <Typography variant="body1">
         Dummy Component to demonstrate nested routing {dynamic}. Use browser
         back button to go back
       </Typography>

@@ -20,7 +20,6 @@ const Layout = (props) => {
     try {
       const ssoCred = Cookies.get('SSO_CRED');
       ssoUserInfo = JSON.parse(ssoCred || '{}');
-      console.log(ssoUserInfo);
       // dispatch(setUserInfo(ssoUserInfo));
     } catch (err) {
       console.log(err);
