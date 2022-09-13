@@ -51,7 +51,7 @@ const Layout = (props) => {
               <Route path="/home">
                 <Home />
               </Route>
-              {/* define additional routes here */}
+              {/* define additional routes here 2 */}
               <Route path="/demo1">
                 <Demo1 />
               </Route>
