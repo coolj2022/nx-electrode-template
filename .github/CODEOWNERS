@@ -1,0 +1,5 @@
+# These owners will be the default owners for everything in the repo.
+* @coolj2022/core_team
+
+# subapp
+/packages/demo1 @coolj2022/subapp_team
