@@ -8,7 +8,7 @@ This project was generated using [Nx](https://nx.dev). Click [here](./docs/NX.md
 - [Tools](#tools)
 - [Git Workflow](./docs/git_workflow.md)
 
-## Getting Started
+## Getting Started 
 
 ### Package Installation
 
