@@ -2,6 +2,6 @@
 
 ## Solution
 
-### References
+## References
 
 - **JIRA**: XXX-####

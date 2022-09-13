@@ -8,14 +8,14 @@ This is an overview of the source control management workflow. This repository f
 
 Before making updates, create a new branch to do your work.
 
-Branches are named `<subapp-name>/<category>/<tracker-number>/<description>`
+Branches are named `<subapp-name>/<category>/<tracker-number>`
 
 Be sure to use [`kebab-case`](https://medium.com/javascript-in-plain-english/convert-string-to-different-case-styles-snake-kebab-camel-and-pascal-case-in-javascript-da724b7220d7) in the subapp name and feature description.
 
 Examples:
 
-- core/doc/MECOE-1711/pr-standards
-- chatbot/feat/JIRA-123/new-button
+- core/doc/MECOE-1711
+- chatbot/feat/JIRA-123
 
 ### Subapp name
 
@@ -59,7 +59,7 @@ Simply use `yarn cz` instead of git commit when committing.
 
 Husky is a great tool for configuring git hooks, which can automatically lint code and commit messages, run unit tests (and so much more) before you push to a remote repository. This helps to ensure no bad code gets into the repository because someone forgot to manually run the lint or test commands manually first.
 
-There are 2 husky hooks we defined:
+There are 3 husky hooks we defined:
 
 - `commit-msg`
 
@@ -82,6 +82,10 @@ There are 2 husky hooks we defined:
 
   It wires up the Husky pre-commit hook to call `lint-staged`. When we have any ESLint errors, or Prettier formatting issues in our staged files (and we didn't use IDE extensions to automatically reformat on file save etc), then before the commit task runs, our files will checked and automatically fixed if possible.
 
+- `pre-push`
+
+  This hook is called when you try to execute `git push`. It's configured to run `nx affected:test`, if test command fails, your push will be automatically aborted.
+
 ---
 
 ## Rebase before you make the PR, if needed
@@ -96,26 +100,28 @@ $ git pull --rebase origin main
 
 ## Creating a Pull Request
 
-These steps should be done prior to requesting a review for the pull request.
+### PR Title
 
-- Git log should be a story, at least have some sense of chronological order and hints regarding what is being changed.
-- Try to keep PR to be manageable and NOT HUGE.
-- Set Reviewers
-- Set Assignees - Make yourself the assignee.
-- Provide a high-level description that describes what the change is doing to trying to resolve.
+Please format the title as follows: `<type>(<subapp-name>): <short description> - <tracker-number>`
+
+Example:
+
+```
+doc(core): add pr standards - MECOE-1711
+```
+
+`Type`
+
+The allowed types follow the [conventional-changelog](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional#type-enum) standard.
 
 ### Request Review
 
-The process for requesting a review will vary, depending on your team. Some examples are:
-
-- Posting the PR GH link in the Teams channel
-- Sending the PR GH link directly to other members of your team
-- Clicking on the gear next to in the `Reviewers` section on GH and adding team members.
+- Assign more than 2 team members as the reviewer.
+- If your PR affects [core](../apps/core/) files, you should add a member of desktop core team.
 
 ### Merging a Pull Request
 
 When a pull request you submitted has received one or more +1 comments and its tests all pass, it's ready to merge into master.
 
 - Squash commits when merging
-- Wait for CI to complete
 - Make sure feature branch is deleted after merge
