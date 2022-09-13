@@ -22,7 +22,7 @@ export const HomePage = () => {
       }}
     >
       <Typography variant="h3">Welcome {userName},</Typography>
-      <Typography variant="h3">Electrode SubApp Template</Typography>
+      <Typography variant="h3">Electrode SubApp Template 2</Typography>
       <Typography variant="body1">
         Subapps represent a novel approach for developing web applications with
         electrode. At its core, a subapp is a component, and if React is used -
