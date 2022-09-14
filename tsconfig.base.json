@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/shared": ["packages/shared/src/index.ts"],
-      "demo1": ["packages/demo1/src/index.ts"],
-      "ui": ["packages/ui/src/index.ts"]
+      "@coolj/shared": ["packages/shared/src/index.ts"],
+      "@coolj/demo1": ["packages/demo1/src/index.ts"],
+      "@coolj/ui": ["packages/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
