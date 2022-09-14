@@ -7,9 +7,9 @@ import styled from 'styled-components';
 import Cookies from 'electrode-cookies';
 import Home from './containers/HomePage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Header, SideNav } from 'ui';
+import { Header, SideNav } from '@coolj/ui';
 import menuData from '../common/menu';
-import { subApp as demo1SubApp, reducers as demo1Reducers } from 'demo1';
+import { subApp as demo1SubApp, reducers as demo1Reducers } from '@coolj/demo1';
 
 const Demo1 = createDynamicComponent(demo1SubApp, { ssr: false });
 

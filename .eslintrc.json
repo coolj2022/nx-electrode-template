@@ -9,12 +9,15 @@
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
-            "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
+                "sourceTag": "scope:core",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "scope:demo1",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
               }
             ]
           }
